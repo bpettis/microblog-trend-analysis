@@ -29,6 +29,7 @@ argParser.add_argument("-t", "--title", type=str, default='Tweet Frequency', hel
 argParser.add_argument("-x", "--x-ticks", type=int, default=6, help="Interval of x-ticks to display. (Default is every 6th tick)")
 argParser.add_argument("-s", "--start", help="Earliest date of data that should be charted (useful for large datasets)")
 argParser.add_argument("-e", "--end", help="Latest date of data that should be charted (useful for large datasets)")
+argParser.add_argument("-l", "--y-label", type=str, default='Tweets', help="Label for the y-axis (default is 'Tweets')")
 
 
 args = argParser.parse_args()
@@ -36,14 +37,7 @@ args = argParser.parse_args()
 
 def create_chart(df, col, startDate, endDate):
     # Create a plot
-    plt.figure(figsize=(25, 15))
-
-    # Set the size of elements:
-    plt.rcParams.update({'font.size': 24})
-    plt.rcParams.update({'axes.titlesize': 28})
-    plt.rcParams.update({'axes.labelsize': 24})
-    plt.rcParams.update({'xtick.labelsize': 28})
-    plt.rcParams.update({'ytick.labelsize': 28})
+    plt.figure(figsize=(18, 10))
 
 
     # Add the data (Group the datetime elements by hour)
@@ -75,10 +69,10 @@ def create_chart(df, col, startDate, endDate):
 
 
     # Add some labels
-    plt.title(args.title)
-    plt.xlabel('Timestamp')
-    plt.ylabel('Tweets Per Hour')
-    
+    plt.title(args.title, fontsize=24)
+    plt.xlabel('Timestamp', fontsize=18)
+    plt.ylabel(args.y_label, fontsize=18)
+
     plt.tight_layout()
 
     # Output to file
