@@ -170,3 +170,4 @@ data/*
 
 ## ignore output
 output/*
+outputs/*
