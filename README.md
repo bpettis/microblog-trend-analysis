@@ -20,9 +20,23 @@ Similarly, scripts' output directories will be excluded via `.gitignore` to avoi
 
 Simple descriptions/overviews of each script and/or project component. Some scripts are platform-agnostic, that is to say that they will work with data scraped from any social media platform so long as it is formatted in a consistent and predictable way. 
 
+### All Platforms
+
+#### Histograms
+
+These scripts take an input CSV file which contains individual posts/tweets/toots (one per row) and creates visual representations of posting activity. 
+
+More details: [histograms/README.md](./histograms/README.md)
+
+### Bluesky
+
+## Scraping
+
+I do not have a specific Bluesky scraping script of my own, but I recommend this project which is highly capable for most use cases: https://github.com/mstanfill/BskyScraper
+
 ### Twitter/X
 
-### Birdwatch Crossreferencing ([birdwatch-xref](./birdwatch-xref/))
+#### Birdwatch Crossreferencing ([birdwatch-xref](./birdwatch-xref/))
 
 Compare a list of Tweet IDs and determine which, if any, received notes in Birdwatch/Community Notes, Twitter's crowd-sourced program for fact-checking and community moderation.
 
@@ -31,7 +45,7 @@ Birdwatch data is pulled from the [Birdwatch Archive](https://birdwatcharchive.o
 
 More details here: [birdwatch-xref/README.md](birdwatch-xref/README.md)
 
-### Check TwitterUsers (`user-checking`)
+#### Check TwitterUsers (`user-checking`)
 
 Takes a CSV file which contains twitter usernames and attempt to determine whether the account is active, suspended, or deleted.
 

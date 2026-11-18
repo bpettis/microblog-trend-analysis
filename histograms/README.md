@@ -1,6 +1,6 @@
 # histograms
 
-The goal of this script (or possibly scripts) is to take the input data from the scrapped Twitter sets and create a histogram of tweet frequency. This gives a visual representation of how each trend/phenomenon unfolded - e.g. whether it was sustained tweeting over several days, or if there were "waves" of activity.
+The goal of this script (or possibly scripts) is to take the input data from the scraped Twitter sets and create a histogram of tweet frequency. This gives a visual representation of how each trend/phenomenon unfolded - e.g. whether it was sustained tweeting over several days, or if there were "waves" of activity.
 
 Next, we create an additional histogram - this time just representing tweets by tweeters on our "suspects list" - the folks who were tweeting most frequently. We want to determine if there is a correlation between their activity and what the masses were tweeting. Is there a distinct "lead time" that might be a result of these people "instigating" others to participate? Or is it largely just noise?
 
