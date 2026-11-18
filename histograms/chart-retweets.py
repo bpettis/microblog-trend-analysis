@@ -30,6 +30,7 @@ argParser.add_argument("-c", "--column-number", type=int, default=3, help="Index
 argParser.add_argument("-r", "--retweet-column", type=int, default=2, help="Index of column in CSV which contains the Tweet Text. Start counting at 0! - (default value is 2)")
 argParser.add_argument("-t", "--title", type=str, default='Tweet Frequency', help="Title that should be displayed above the chart")
 argParser.add_argument("-x", "--x-ticks", type=int, default=6, help="Interval of x-ticks to display. (Default is every 6th tick)")
+argParser.add_argument("-l", "--y-label", type=str, default='Tweets', help="Label for the y-axis (default is 'Tweets')")
 
 
 args = argParser.parse_args()
@@ -37,7 +38,7 @@ args = argParser.parse_args()
 
 def create_chart(df, col):
     # Create a plot
-    plt.figure(figsize=(25, 15))
+    plt.figure(figsize=(18, 10))
 
 
     # Add the data (Group the datetime elements by hour)
@@ -54,10 +55,10 @@ def create_chart(df, col):
     plt.grid(axis='y', alpha=0.75)
 
     # Add some labels
-    plt.title(args.title)
-    plt.xlabel('Timestamp')
-    plt.ylabel('Tweets')
-    
+    plt.title(args.title, fontsize=24)
+    plt.xlabel('Timestamp', fontsize=18)
+    plt.ylabel(args.y_label, fontsize=18)
+
     plt.tight_layout()
 
     # Output to file
