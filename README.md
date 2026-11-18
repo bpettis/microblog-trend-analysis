@@ -4,7 +4,16 @@ This repo will contain some basic scripts for interacting with previously scrape
 
 This is a spin-off of an earlier project which aimed to assess the activities of right-wing "culture warriors" on Twitter (https://github.com/bpettis/twitter-ringleaders). That project was built around parsing Twitter data, specifically. However, 
 
+## Setup
 
+1. Create a virtual environment (not required but highly recommended)
+
+2. Install packages
+
+In some of the subdirectories, there are `requirements.txt` files that you can use to install necessary libraries:
+`pip install -r requirements.txt` 
+
+3. Import some data (see directory information below)
 
 ### Input Data
 
